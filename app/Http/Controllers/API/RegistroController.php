@@ -32,9 +32,9 @@ class RegistroController extends Controller
             'nombre' => 'required|min:2|max:20|alpha',
             'apellidos' => ['required','min:2','max:40',new AlphaSpaces],
             'dni' => ['required', new DniEspaniol],
-            'telefono' => ['min:9','max:12',new Telephone],
+            'telefono' => ['min:9','max:12',new Telephone, 'nullable'],
             'iban' => ['required', new Iban],
-            'informacion' => 'min:20|max:250'
+            'informacion' => 'min:20|max:250|nullable'
 
         ]);
 
